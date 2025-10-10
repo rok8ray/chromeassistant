@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="typo.js/typo.js"></script>
+</head>
+  <script>
+  // Create a new Typo instance
+  const dictionary = new Typo("en_US", "typo.js/en_US.aff", "typo.js/en_US.dic", {
+    platform: "any"
+  });
+
+  // Test it
+  console.log(dictionary.check("hello"));   // true (usually)
+  console.log(dictionary.check("skibidi")); // false (unless you add it)
+</script>
+</body>
+</html>

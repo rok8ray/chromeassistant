@@ -1,0 +1,17 @@
+ <!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ChromeAssistant</title>
+        <link rel="icon" type="image/x-icon" href="/favicons/chromeassistant_logo.png">
+    </head>
+    <body style="font-family:Inter">
+        <h1>ChromeAssistant has opened your page!</h1>
+        <p>This window should close automatically. If not, close it manually.</p>
+        <script>
+            function closeWindow() {
+                window.close();
+            }
+            const myTimeout = setTimeout(closeWindow, 2000);
+        </script>

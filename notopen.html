@@ -1,0 +1,19 @@
+ <!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ChromeAssistant</title>
+        <link rel="icon" type="image/x-icon" href="/favicons/chromeassistant_logo.png">
+        <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    </head>
+    <body style="font-family:Inter">
+        <h1>Uh oh</h1>
+        <p>ChromeAssistant couldn't open your page. Try a different query, or try again later.</p>
+        <p>This window should close automatically in 5 seconds. If not, close it manually.</p>
+        <script>
+            function closeWindow() {
+                window.close();
+            }
+            const myTimeout = setTimeout(closeWindow, 5000);
+        </script>

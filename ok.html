@@ -21,6 +21,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const q = urlParams.get('q');
             window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
+            function checkOpen(query, site) {
+                if (q == query) {
+                    window.open(site);
+                } else {
+                    pass
+                }
+            };
+            checkOpen("lalala", "https://www.rayyanzia.com");
             if (q == "open classroom") {
             window.open("https://www.classroom.google.com", "_self");
             } else if (q == "open docs") {
@@ -39,12 +47,13 @@
             window.open("https://www.docs.google.com/spreadsheets", "_self");
             } else if (q == "new sheet") {
             window.open("https://www.sheet.new", "_self");
-
+        
             } else {
                 function notOpen() {
                     window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
                 }
                 const myTimeout = setTimeout(notOpen, 2500);
             }
+
 
         </script>

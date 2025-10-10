@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <title>Typo.js Test</title>
+
+  <!-- Load Typo.js -->
   <script src="typo.js/typo.js"></script>
 </head>
-  <script>
-  // Create a new Typo instance
-  const dictionary = new Typo("en_US", "typo.js/en_US.aff", "typo.js/en_US.dic", {
-    platform: "any"
-  });
+<body>
+  <h1>Typo.js Spellcheck Test</h1>
 
-  // Test it
-  console.log(dictionary.check("hello"));   // true (usually)
-  console.log(dictionary.check("skibidi")); // false (unless you add it)
-</script>
+  <script>
+    // Wait until Typo.js is loaded
+    window.addEventListener("load", function () {
+      // Create a new Typo instance
+      const dictionary = new Typo(
+        "en_US",
+        "typo.js/en_US.aff",
+        "typo.js/en_US.dic",
+        { platform: "any" }
+      );
+
+      // Test it
+      console.log("hello →", dictionary.check("hello"));   // true
+      console.log("skibidi →", dictionary.check("skibidi")); // false
+    });
+  </script>
 </body>
 </html>

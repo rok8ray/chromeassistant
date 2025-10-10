@@ -11,19 +11,16 @@
   <h1>Typo.js Spellcheck Test</h1>
 
   <script>
-    // Wait until Typo.js is loaded
     window.addEventListener("load", function () {
-      // Create a new Typo instance
       const dictionary = new Typo(
         "en_US",
-        "typo.js/en_US.aff",
-        "typo.js/en_US.dic",
+        "Typo.js-master/typo/dictionaries/en_US.aff",
+        "Typo.js-master/typo/dictionaries/en_US.dic",
         { platform: "any" }
       );
 
-      // Test it
-      console.log("hello →", dictionary.check("hello"));   // true
-      console.log("skibidi →", dictionary.check("skibidi")); // false
+      console.log("hello →", dictionary.check("hello"));   // should now be true
+      console.log("skibidi →", dictionary.check("skibidi")); // false unless added
     });
   </script>
 </body>

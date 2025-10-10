@@ -21,34 +21,17 @@
             const urlParams = new URLSearchParams(window.location.search);
             const q = urlParams.get('q');
             window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
+            if (q) {
             function checkOpen(query, site) {
                 if (q == query) {
-                    window.open(site);
+                    window.open("https://www." + site, "_self");
+                    return;
                 } else {
                     pass
                 }
             };
-            checkOpen("lalala", "https://www.rayyanzia.com");
-            if (q == "open classroom") {
-            window.open("https://www.classroom.google.com", "_self");
-            } else if (q == "open docs") {
-            window.open("https://www.docs.google.com", "_self");
-            } else if (q == "new doc") {
-            window.open("https://www.doc.new", "_self");
-            } else if (q == "open slides") {
-            window.open("https://www.docs.google.com/presentation", "_self");
-            } else if (q == "new slide") {
-            window.open("https://www.slide.new", "_self");
-            } else if (q == "open forms") {
-            window.open("https://www.docs.google.com/forms", "_self");
-            } else if (q == "new form") {
-            window.open("https://www.form.new", "_self");
-            } else if (q == "open sheets") {
-            window.open("https://www.docs.google.com/spreadsheets", "_self");
-            } else if (q == "new sheet") {
-            window.open("https://www.sheet.new", "_self");
-        
-            } else {
+            checkOpen("lalala", "rayyanzia.com");
+            
                 function notOpen() {
                     window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
                 }
@@ -57,3 +40,4 @@
 
 
         </script>
+

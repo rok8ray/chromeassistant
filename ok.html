@@ -20,10 +20,19 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search);
             const q = urlParams.get('q');
+            const infiniteCampus = ["open ic", "open infinite", "ic", "open campus"]
             window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
             if (q) {
                 function checkOpen(query, site) {
                     if (q == query) {
+                        window.open("https://" + site, "_self");
+                        return;
+                    } else {
+                        return;
+                    }
+                };
+                function checkOpenFromList(list, site) {
+                    if (list.includes(q)) {
                         window.open("https://" + site, "_self");
                         return;
                     } else {
@@ -38,6 +47,7 @@
                 checkOpen("open sheets", "sheets.google.com");
                 checkOpen("open gmail", "www.gmail.com");
                 checkOpen("open drive", "drive.google.com");
+                checkOpenFromList(infiniteCampus, "hamiltonwi.infinitecampus.org/campus/portal/students/hamilton.jsp"
             
                 function notOpen() {
                     window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
@@ -47,6 +57,7 @@
 
 
         </script>
+
 
 
 

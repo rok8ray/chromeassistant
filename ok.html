@@ -21,6 +21,8 @@
             const urlParams = new URLSearchParams(window.location.search);
             const q = urlParams.get('q');
             const infiniteCampus = ["open ic", "open infinite", "ic", "open campus"]
+            const ICSchedule = ["schedule", "what's my schedule", "what's my schedule today", "schedule for today", "what do i have today"]
+            
             window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
             if (q) {
                 function checkOpen(query, site) {
@@ -49,6 +51,7 @@
                 checkOpen("open drive", "drive.google.com");
                 checkOpen("open edgems", "clever.com/oauth/authorize?channel=clever-portal&client_id=0b24982b93feffdc6e6e&confirmed=true&district_id=5a32daeb70cfb00001bc0119&redirect_uri=https%3A%2F%2Fapp.edgems.com%2Fv1%2Fauth%2Fclever%2Fcallback&response_type=code");
                 checkOpenFromList(infiniteCampus, "hamiltonwi.infinitecampus.org/campus/portal/students/hamilton.jsp");
+                checkOpenFromList(ICSchedule, "https://hamiltonwi.infinitecampus.org/campus/nav-wrapper/student/portal/student/schedule?appName=hamilton");
             
                 function notOpen() {
                     window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
@@ -58,6 +61,7 @@
 
 
         </script>
+
 
 
 

@@ -39,6 +39,9 @@
                 };
                 function checkOpenFromList(list, site) {
                     if (list.includes(q)) {
+                        if (list === ICSchedule) {
+                            window.alert("You may need to click Schedule on the screen that loads.");
+                        }
                         window.open("https://" + site, "_self");
                         return;
                     } else {
@@ -68,6 +71,7 @@
 
 
         </script>
+
 
 
 

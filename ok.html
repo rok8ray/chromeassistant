@@ -22,6 +22,10 @@
             const q = urlParams.get('q');
             const infiniteCampus = ["open ic", "open infinite", "ic", "open campus"]
             const ICSchedule = ["schedule", "what's my schedule", "what's my schedule today", "schedule for today", "what do i have today", "day", "a or b", "a", "b", "is it an a or b day", "is it a or b day"]
+            const docsNew = ["new doc", "new document", "new docs"]
+            const sliNew = ["new slide", "new slideshow", "new slides"]
+            const formsNew = ["new form", "new forms", "new survey"]
+            const sheetsNew = ["new sheet", "new spreadsheet", "new sheets"]
             
             window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
             if (q) {
@@ -41,12 +45,15 @@
                         return;
                     }
                 };
-            // checkOpen("lalala", "rayyanzia.com");
                 checkOpen("open classroom", "www.classroom.google.com");
                 checkOpen("open docs", "www.docs.google.com");
+                checkOpenFromList(docsNew, "doc.new");
                 checkOpen("open forms", "forms.google.com");
+                checkOpenFromList(formsNew, "forms.new");
                 checkOpen("open slides", "slides.google.com");
+                checkOpenFromList(sliNew, "slide.new");
                 checkOpen("open sheets", "sheets.google.com");
+                checkOpenFromList(sheetsNew, "sheet.new");
                 checkOpen("open gmail", "www.gmail.com");
                 checkOpen("open drive", "drive.google.com");
                 checkOpen("open edgems", "clever.com/oauth/authorize?channel=clever-portal&client_id=0b24982b93feffdc6e6e&confirmed=true&district_id=5a32daeb70cfb00001bc0119&redirect_uri=https%3A%2F%2Fapp.edgems.com%2Fv1%2Fauth%2Fclever%2Fcallback&response_type=code");
@@ -61,6 +68,7 @@
 
 
         </script>
+
 
 
 

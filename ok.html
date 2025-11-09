@@ -50,12 +50,13 @@
             };
 
             function checkMailTo() {
+                let suffix = "null"
                 if (q == "mail to") {
                     const teacher = window.confirm("Press Cancel if it's a Student, and OK if it's a teacher.");
                     if (teacher) {
-                        const suffix = "@hamilton.k12.wi.us"
+                        suffix = "@hamilton.k12.wi.us"
                     } else {
-                        const suffix = "@hamiltonstudents.org"
+                        suffix = "@hamiltonstudents.org"
                     }
                     const pre = window.prompt("Please enter the first part of the email, without the @ or anything after it. (eg. ziaray2)", "Type...");
                     window.open(pre + suffix);
@@ -89,6 +90,7 @@
 
 
         </script>
+
 
 
 

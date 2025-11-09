@@ -30,6 +30,7 @@
 
             function checkOpen(query, site) {
                     if (q == query) {
+                        window.open("https://chromeassistant.netlify.app/opened.html", "_blank", "fullscreen=no,height=200,width=400");
                         window.open("https://" + site, "_self");
                         return;
                     } else {
@@ -42,6 +43,7 @@
                     if (list === ICSchedule) {
                         window.alert("You may need to click Schedule on the screen that loads.");
                     }
+                        window.open("https://chromeassistant.netlify.app/opened.html", "_blank", "fullscreen=no,height=200,width=400");
                         window.open("https://" + site, "_self");
                         return;
                     } else {
@@ -63,10 +65,9 @@
                 }
             }
             function notOpen() {
-                    window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
+                    window.open("https://chromeassistant.netlify.app/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
             }
             
-            // window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
             if (q) {
                 checkOpen("open classroom", "www.classroom.google.com");
                 checkOpen("open docs", "www.docs.google.com");
@@ -90,28 +91,3 @@
 
 
         </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

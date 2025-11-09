@@ -27,28 +27,46 @@
             const formsNew = ["new form", "new forms", "new survey"]
             const sheetsNew = ["new sheet", "new spreadsheet", "new sheets"]
             const mailNew = ["new email", "compose", "email", "compose email", "new gmail"]
-            
-            window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
-            if (q) {
-                function checkOpen(query, site) {
+
+            function checkOpen(query, site) {
                     if (q == query) {
                         window.open("https://" + site, "_self");
                         return;
                     } else {
                         return;
                     }
-                };
-                function checkOpenFromList(list, site) {
-                    if (list.includes(q)) {
-                        if (list === ICSchedule) {
-                            window.alert("You may need to click Schedule on the screen that loads.");
-                        }
+            };
+            
+            function checkOpenFromList(list, site) {
+                if (list.includes(q)) {
+                    if (list === ICSchedule) {
+                        window.alert("You may need to click Schedule on the screen that loads.");
+                    }
                         window.open("https://" + site, "_self");
                         return;
                     } else {
                         return;
                     }
-                };
+            };
+
+            function checkMailto() {
+                if (q == "mail to") {
+                    const teacher = window.confirm("Press Cancel if it's a Student, and OK if it's a teacher.");
+                    if (teacher) {
+                        const suffix = "@hamilton.k12.wi.us"
+                    } else {
+                        const suffix = "@hamiltonstudents.org"
+                    }
+                    const pre = window.prompt("Please enter the first part of the email, without the @ or anything after it. (eg. ziaray2)");
+                    window.open(pre + suffix);
+                }
+            }
+            function notOpen() {
+                    window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
+            }
+            
+            window.open("https://chromeassistant.neocities.org/opened.html", "_blank", "fullscreen=no,height=200,width=400");
+            if (q) {
                 checkOpen("open classroom", "www.classroom.google.com");
                 checkOpen("open docs", "www.docs.google.com");
                 checkOpenFromList(docsNew, "doc.new");
@@ -64,10 +82,8 @@
                 checkOpenFromList(infiniteCampus, "hamiltonwi.infinitecampus.org/campus/portal/students/hamilton.jsp");
                 checkOpenFromList(ICSchedule, "hamiltonwi.infinitecampus.org/campus/nav-wrapper/student/portal/student/calendar?appName=hamilton");
                 checkOpenFromList(mailNew, "mail.google.com/mail/u/1/?fs=1&to=&tf=cm");
-            
-                function notOpen() {
-                    window.open("https://chromeassistant.neocities.org/notopen.html", "_blank", "fullscreen=no,height=200,width=400");
-                }
+                checkMailTo();
+                
                 const myTimeout = setTimeout(notOpen, 2500);
             }
 
